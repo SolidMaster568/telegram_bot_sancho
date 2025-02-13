@@ -12,6 +12,7 @@ from utils import (
     decrease_subscription_days,
     subscription_checker,
 )
+from datetime import datetime, timedelta
 
 if not os.path.exists("logs/"):
     os.system("mkdir logs")

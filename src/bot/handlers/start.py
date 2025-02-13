@@ -12,7 +12,7 @@ start_router = Router()
 
 
 @start_router.message(UserSubscribedFilter(), CommandStart())
-@start_router.message(UserSubscribedFilter(), F.text == "Back to main menu")
+@start_router.message(UserSubscribedFilter(), F.text == "👉 Back to main menu")
 async def start_for_subsribed_user(message: types.Message, state: FSMContext):
     await state.clear()
     if message.from_user is None:
@@ -30,7 +30,7 @@ async def start_for_subsribed_user(message: types.Message, state: FSMContext):
 
 
 @start_router.message(UserNotSubscribedFilter(), CommandStart())
-@start_router.message(UserNotSubscribedFilter(), F.text == "Back to main menu")
+@start_router.message(UserNotSubscribedFilter(), F.text == "👉 Back to main menu")
 async def start_for_not_subsribed_user(
     message: types.Message, state: FSMContext, command: Optional[CommandObject] = None
 ):

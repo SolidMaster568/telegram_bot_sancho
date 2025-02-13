@@ -6,7 +6,7 @@ from database import users
 check_subscription_router = Router()
 
 
-@check_subscription_router.message(F.text == "Check subscription")
+@check_subscription_router.message(F.text == "📝 Check subscription")
 async def check_subscription(message: types.Message):
     if message.from_user is None:
         return
