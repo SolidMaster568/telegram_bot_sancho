@@ -49,7 +49,6 @@ async def check_transaction(message: types.Message, state: FSMContext):
     if message.text is None or message.from_user is None:
         return
 
-    # if transaction is None and tronscan_service.is_valid_transaction_hash(message.text):
     if transaction is None:
         data = await state.get_data()
         await transactions.create(

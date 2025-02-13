@@ -3,14 +3,12 @@
 - [Introduction](#introduction)
   - [Basic Subscription Functionality 📋](#basic-subscription-functionality)
   - [Payment Verification ✅](#payment-verification)
-  - [Handling User Subscriptions 🤖](#handling-user-subscriptions)
 - [Project Structure 📂](#project-structure)
 - [Installation 🚀](#installation)
 - [Configuration ⚙️](#configuration)
 - [Running ▶️](#running)
 - [Usage 📝](#usage)
   - [Configuration File 🛠️](#configuration-file)
-  - [Handling User Subscription 🤖](#handling-user-subscription)
 
 
 ## Introduction
@@ -76,18 +74,17 @@ Before running the bot, you need to configure the following parameters:
 
 1. Create a bot on Telegram and obtain its token from BotFather.
 
-2. Edit the `.env-dist` file, specifying the obtained token and other settings if necessary:
+2. Create `.env` file and add below
     ```env
     BOT_TOKEN=123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
     ```
-3. Rename the `.env-dist` file to `.env`.
 
 ## Running 
 
 After configuring, you can start the bot with the following command:
 ```shell
 cd src/bot/
-python3 app.py
+python app.py
 ```
 
 The bot will be active and ready to handle commands and user requests on Telegram.

@@ -3,7 +3,6 @@ import asyncio
 from database import create_schema_if_not_exist as database_create_schema_if_not_exist
 from handlers import (
     admin_router,
-    # balance_router,
     channels_join_requests_router,
     check_subscription_router,
     close_functionality_router,
@@ -27,7 +26,6 @@ async def on_startup():
         channels_join_requests_router,
         check_subscription_router,
         referral_router,
-        # balance_router,
     )
 
     await database_create_schema_if_not_exist()
