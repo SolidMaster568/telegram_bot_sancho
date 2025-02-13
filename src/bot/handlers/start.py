@@ -24,7 +24,7 @@ async def start_for_subsribed_user(message: types.Message, state: FSMContext):
     await message.answer(
         text="Hello.\n"
         f"Your subscription is active until <code>{user.days_sub_end}</code>.\n"
-        "Do not miss the day of payment to always have access to closed functionality.",
+        "Do not miss the day of payment to always have access to channels.",
         reply_markup=await reply_keyboards.close_functionality(),
     )
 
@@ -37,6 +37,6 @@ async def start_for_not_subsribed_user(
     await state.clear()
 
     await message.answer(
-        text="Hello. Subscribe to the bot to get access to the closed functionality.",
+        text="Hello. Subscribe to the bot to get access to the channels.",
         reply_markup=await reply_keyboards.make_subscribtion(),
     )
